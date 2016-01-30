@@ -47,3 +47,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+#Merge conflict related files
+*.orig
+*.orig.meta

@@ -41,6 +41,10 @@ public class TimeController : MonoBehaviour {
         GUILayout.Label(string.Format("{0:00}:{1:00} {2}", FormattedHour(), minute, AmPmString()));
     }
 
+    public float GetFractionalTimeAfterDawn() {
+        return ((hour - 6) * 60 + minute) / (float) (24 * 60);
+    }
+
     // Some help from: http://forum.unity3d.com/threads/noob-question-help-with-in-game-clock.37668/
     private void UpdateTime() {
         minute += minuteIncrement;

@@ -2,7 +2,9 @@
 using System.Collections;
 
 public class TimeController : MonoBehaviour {
-    
+
+    public GameReset gameResetScript;
+
     private double secondOfDay = 21600;
 
     private bool paused = false;
@@ -55,11 +57,12 @@ public class TimeController : MonoBehaviour {
     private void NewTimeEvents() {
         if (isTimeLaterThan(24, 0)) {
             // You've reached a new day and you died.
+            gameResetScript.Reset();
         }
     }
 
     private bool isTimeLaterThan(int hour, int minute) {
-        return hour >= this.hour && minute >= this.minute;
+        return secondOfDay > ((hour * 60 * 60) + (minute * 60));
     }
 
     // Converts the 12 hour time to 12-hour time.

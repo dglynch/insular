@@ -114,6 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00e388f9b4a6fca44b03dc055488eaa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObjectToDestroy: {fileID: 1361393965}
 --- !u!4 &11480867
 Transform:
   m_ObjectHideFlags: 0
@@ -2316,7 +2317,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 443356, guid: 1d01966c4b7e9334a92a59ce090303a5, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -20.286
+      value: -20.99
       objectReference: {fileID: 0}
     - target: {fileID: 443356, guid: 1d01966c4b7e9334a92a59ce090303a5, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2324,7 +2325,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 443356, guid: 1d01966c4b7e9334a92a59ce090303a5, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -35.333
+      value: -37.08
       objectReference: {fileID: 0}
     - target: {fileID: 443356, guid: 1d01966c4b7e9334a92a59ce090303a5, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2348,12 +2349,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 165110, guid: 1d01966c4b7e9334a92a59ce090303a5, type: 2}
       propertyPath: m_Name
-      value: WalkingTrigger_3
+      value: WalkingTrigger_2
       objectReference: {fileID: 0}
     - target: {fileID: 11432070, guid: 1d01966c4b7e9334a92a59ce090303a5, type: 2}
       propertyPath: triggerQueue
       value: 
       objectReference: {fileID: 11480866}
+    - target: {fileID: 443356, guid: 1d01966c4b7e9334a92a59ce090303a5, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 6.440742
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1d01966c4b7e9334a92a59ce090303a5, type: 2}
   m_IsPrefabParent: 0
@@ -3867,6 +3872,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a76f06e3d25a72b4f89cfe4f3bf196c5, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1361393965 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 170274, guid: a76f06e3d25a72b4f89cfe4f3bf196c5, type: 2}
+  m_PrefabInternal: {fileID: 1295604835}
 --- !u!1001 &1433110771
 Prefab:
   m_ObjectHideFlags: 0
@@ -3876,7 +3885,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 443356, guid: 1d01966c4b7e9334a92a59ce090303a5, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -21.094593
+      value: -23.1
       objectReference: {fileID: 0}
     - target: {fileID: 443356, guid: 1d01966c4b7e9334a92a59ce090303a5, type: 2}
       propertyPath: m_LocalPosition.y
@@ -3884,7 +3893,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 443356, guid: 1d01966c4b7e9334a92a59ce090303a5, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -33.188652
+      value: -31.95
       objectReference: {fileID: 0}
     - target: {fileID: 443356, guid: 1d01966c4b7e9334a92a59ce090303a5, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3908,7 +3917,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 443356, guid: 1d01966c4b7e9334a92a59ce090303a5, type: 2}
       propertyPath: m_LocalScale.x
-      value: 2.660028
+      value: 7.1785336
       objectReference: {fileID: 0}
     - target: {fileID: 443356, guid: 1d01966c4b7e9334a92a59ce090303a5, type: 2}
       propertyPath: m_LocalScale.z
@@ -3916,7 +3925,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 165110, guid: 1d01966c4b7e9334a92a59ce090303a5, type: 2}
       propertyPath: m_Name
-      value: WalkingTrigger_2
+      value: WalkingTrigger_1
       objectReference: {fileID: 0}
     - target: {fileID: 11432070, guid: 1d01966c4b7e9334a92a59ce090303a5, type: 2}
       propertyPath: triggerQueue
@@ -3940,7 +3949,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1803810447}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 1
@@ -6122,7 +6131,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 443356, guid: 1d01966c4b7e9334a92a59ce090303a5, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -18.284594
+      value: -16.62
       objectReference: {fileID: 0}
     - target: {fileID: 443356, guid: 1d01966c4b7e9334a92a59ce090303a5, type: 2}
       propertyPath: m_LocalPosition.y
@@ -6154,7 +6163,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 165110, guid: 1d01966c4b7e9334a92a59ce090303a5, type: 2}
       propertyPath: m_Name
-      value: WalkingTrigger_1
+      value: WalkingTrigger_0
       objectReference: {fileID: 0}
     - target: {fileID: 6513972, guid: 1d01966c4b7e9334a92a59ce090303a5, type: 2}
       propertyPath: m_Enabled
@@ -6168,6 +6177,10 @@ Prefab:
       propertyPath: triggerQueue
       value: 
       objectReference: {fileID: 11480866}
+    - target: {fileID: 443356, guid: 1d01966c4b7e9334a92a59ce090303a5, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 5.825713
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1d01966c4b7e9334a92a59ce090303a5, type: 2}
   m_IsPrefabParent: 0

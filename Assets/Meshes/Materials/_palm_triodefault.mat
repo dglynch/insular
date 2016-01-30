@@ -137,10 +137,6 @@ Material:
         second: 0
       data:
         first:
-          name: _Occlusion
-        second: 0.95
-      data:
-        first:
           name: _Parallax
         second: 0.02
       data:
@@ -177,8 +173,8 @@ Material:
         second: 0
       data:
         first:
-          name: _Cull
-        second: 2
+          name: _Occlusion
+        second: 0.95
       data:
         first:
           name: _SquashAmount
@@ -186,11 +182,15 @@ Material:
       data:
         first:
           name: _BaseLight
-        second: 1
+        second: 0
       data:
         first:
           name: _AO
         second: 3.31
+      data:
+        first:
+          name: _Cull
+        second: 2
     m_Colors:
       data:
         first:

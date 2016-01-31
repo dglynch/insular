@@ -73,5 +73,5 @@ Copyright and Licence
 Except as noted below, this work is Copyright © 2016 by Alex Allin, Dan Lynch, Sam Robinson, and Nicolas Lavallee. It is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 3.0 licence.
 
 - Textures and models by Nobiax / Yughues:
--- http://opengameart.org/users/yughues)
--- https://www.assetstore.unity3d.com/en/#!/publisher/4986
+    - http://opengameart.org/users/yughues)
+    - https://www.assetstore.unity3d.com/en/#!/publisher/4986

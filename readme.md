@@ -38,7 +38,8 @@ We used the following technologies and tools, in various ways, to develop this s
 
 - Unity 5.3.1f1 Personal Edition
 - Photoshop CC 2014
-- <TODO: add entries for sound/music software>
+- Pro Tools 10
+- Ableton Live Suite 8
 - Git
 - Gitolite
 - SourceTree

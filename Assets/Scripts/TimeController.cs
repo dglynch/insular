@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System;
+using System.Linq;
 
 public class TimeController : MonoBehaviour {
 
@@ -20,12 +23,14 @@ public class TimeController : MonoBehaviour {
 
     private bool paused = false;
 
+    private List<Subscription> subscriptions = new List<Subscription>();
+
     /// <summary>
     /// Hour portion of time of day. Will be 0-23.
     /// </summary>
     public int hour {
         get {
-            return (int)(secondOfDay / 3600) % 24;
+            return (int) (secondOfDay / 3600) % 24;
         }
     }
 
@@ -34,15 +39,33 @@ public class TimeController : MonoBehaviour {
     /// </summary>
     public int minute {
         get {
-            return (int)(secondOfDay / 60) % 60;
+            return (int) (secondOfDay / 60) % 60;
         }
     }
 
     public int speed = 60;
 
+    void Start() {
+        // Change of music at 6pm
+        RegisterSubscription(
+            new Func<bool>(() => isTimeLaterThan(12, 0) && dayMusic),
+            new Action(() => {
+                dayMusic = false;
+                audioSource.Stop();
+                audioSource.clip = nightClip;
+                audioSource.Play();
+            }));
+
+        // Dying after new day
+        RegisterSubscription(
+            new Func<bool>(() => isTimeLaterThan(24, 0)),
+            new Action(() => gameResetScript.Reset())
+            );
+    }
+
     void FixedUpdate() {
         var timeSinceLast = Time.fixedDeltaTime;
-        
+
         UpdateTime(timeSinceLast);
 
         NewTimeEvents();
@@ -53,7 +76,7 @@ public class TimeController : MonoBehaviour {
     }
 
     public float GetFractionalTimeAfterDawn() {
-        return (float)(secondOfDay - (6 * 60 * 60)) / (float) (24 * 60 * 60);
+        return (float) (secondOfDay - (6 * 60 * 60)) / (float) (24 * 60 * 60);
     }
 
     private void UpdateTime(double timeSinceLast) {
@@ -66,16 +89,23 @@ public class TimeController : MonoBehaviour {
     /// Time-specific events happen here.
     /// </summary>
     private void NewTimeEvents() {
-        if (isTimeLaterThan(24, 0)) {
-            // You've reached a new day and you died.
-            gameResetScript.Reset();
+        foreach (var subscription in subscriptions) {
+            if (subscription.Condition()) {
+                subscription.Action();
+                subscription.Completed = true;
+            }
         }
-        if (isTimeLaterThan(18, 0) && dayMusic) {
-            dayMusic = false;
-            audioSource.Stop();
-            audioSource.clip = nightClip;
-            audioSource.Play();
-        }
+        subscriptions = subscriptions.Where(i => i.Completed == false).ToList();
+    }
+
+    public void RegisterSubscription(Func<bool> condition, Action action) {
+        subscriptions.Add(
+            new Subscription {
+                Condition = condition,
+                Action = action,
+                Completed = false
+            }   
+        );
     }
 
     private bool isTimeLaterThan(int hour, int minute) {
@@ -90,5 +120,11 @@ public class TimeController : MonoBehaviour {
 
     private string AmPmString() {
         return hour < 12 ? "AM" : "PM";
+    }
+
+    public class Subscription {
+        public Func<bool> Condition;
+        public Action Action;
+        public bool Completed;
     }
 }

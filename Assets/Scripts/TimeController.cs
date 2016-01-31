@@ -48,7 +48,7 @@ public class TimeController : MonoBehaviour {
     void Start() {
         // Change of music at 6pm
         RegisterSubscription(
-            new Func<bool>(() => isTimeLaterThan(12, 0) && dayMusic),
+            new Func<bool>(() => isTimeLaterThan(18, 0) && dayMusic),
             new Action(() => {
                 dayMusic = false;
                 audioSource.Stop();

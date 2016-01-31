@@ -35,6 +35,10 @@ namespace UnityStandardAssets.Utility {
                 return;
             }
 
+            if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Player")) {
+                return;
+            }
+
             if (!m_SpringJoint) {
                 var go = new GameObject("Rigidbody dragger");
                 Rigidbody body = go.AddComponent<Rigidbody>();

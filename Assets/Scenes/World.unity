@@ -2146,8 +2146,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 969978103}
-  m_LocalRotation: {x: 0.10677218, y: 0.08787493, z: 0.009473563, w: -0.9903474}
-  m_LocalPosition: {x: -288.54294, y: -21.177399, z: 270.12936}
+  m_LocalRotation: {x: 0.28568, y: 0.7027298, z: 0.53034854, w: -0.37853438}
+  m_LocalPosition: {x: -127.86365, y: -70.391, z: -244.52007}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2479,7 +2479,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_RootOrder: 38
 --- !u!1001 &1157877788
 Prefab:
   m_ObjectHideFlags: 0
@@ -2902,6 +2902,149 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 63af7620a7774ad41ac07f785bb77b0a, type: 2}
   m_PrefabInternal: {fileID: 1220973253}
+--- !u!1 &1244495305
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1244495306}
+  - 82: {fileID: 1244495307}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1244495306
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1244495305}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1367394553}
+  m_RootOrder: 4
+--- !u!82 &1244495307
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1244495305}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24329370, guid: ff914f429b027e442ab309656ce12a56,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: a07d38a12bdd5724184b3aac7db91da9, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 0
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0.002
+      value: 1
+      inSlope: -500.20065
+      outSlope: -500.20065
+      tangentMode: 0
+    - time: 0.004
+      value: 0.5
+      inSlope: -125.05016
+      outSlope: -125.05016
+      tangentMode: 0
+    - time: 0.011618818
+      value: 0.25354266
+      inSlope: -10.638882
+      outSlope: -10.638882
+      tangentMode: 0
+    - time: 0.02444391
+      value: 0.19939613
+      inSlope: -7.815635
+      outSlope: -7.815635
+      tangentMode: 0
+    - time: 0.056125455
+      value: 0.069585346
+      inSlope: -1.9539088
+      outSlope: -1.9539088
+      tangentMode: 0
+    - time: 0.092950545
+      value: 0.03125
+      inSlope: -0.4884772
+      outSlope: -0.4884772
+      tangentMode: 0
+    - time: 0.154538
+      value: 0.02093901
+      inSlope: -0.1221193
+      outSlope: -0.1221193
+      tangentMode: 0
+    - time: 0.27168155
+      value: 0.016669182
+      inSlope: -0.030529825
+      outSlope: -0.030529825
+      tangentMode: 0
+    - time: 0.52888787
+      value: 0.007448923
+      inSlope: -0.0076324563
+      outSlope: -0.0076324563
+      tangentMode: 0
+    - time: 1
+      value: 0.002
+      inSlope: -0.002000801
+      outSlope: -0.002000801
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!4 &1274463181 stripped
 Transform:
   m_PrefabParentObject: {fileID: 420148, guid: abf8c719c29ae70499f1018bb3917e6a, type: 2}
@@ -3079,6 +3222,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a9fad21e311cb8145838e5b7396bed52, type: 3}
   - {fileID: 8300000, guid: 62935ac10bfac374b80f1817221f602c, type: 3}
   TimeController: {fileID: 1822655707}
+--- !u!4 &1367394553 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 410322, guid: 1a32d6a7e9e698a4cb71958d61aaff89, type: 2}
+  m_PrefabInternal: {fileID: 613569972}
 --- !u!1001 &1372764916
 Prefab:
   m_ObjectHideFlags: 0

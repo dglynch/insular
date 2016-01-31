@@ -1151,6 +1151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 485abfcb7b32b334bb847fe7ba587554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TimeController: {fileID: 1822655707}
 --- !u!4 &960527955
 Transform:
   m_ObjectHideFlags: 0
@@ -2270,9 +2271,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e61802e1279881448bd021b0d5237382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameResetScript: {fileID: 960527954}
-  audioSource: {fileID: 1643056833}
-  nightClip: {fileID: 8300000, guid: e6c088ef479e76f47bb66a4d901547f8, type: 3}
   speed: 60
 --- !u!4 &1822655708
 Transform:

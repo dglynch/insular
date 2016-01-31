@@ -5,20 +5,7 @@ using System;
 using System.Linq;
 
 public class TimeController : MonoBehaviour {
-
-    public GameReset gameResetScript;
-
-    /// <summary>
-    /// The clip source to change.
-    /// </summary>
-    public AudioSource audioSource;
-    /// <summary>
-    /// Clip that starts playing at night.
-    /// </summary>
-    public AudioClip nightClip;
-
-    private bool dayMusic = true;
-
+    
     private double secondOfDay = 21600;
 
     private bool paused = false;
@@ -44,24 +31,6 @@ public class TimeController : MonoBehaviour {
     }
 
     public int speed = 60;
-
-    void Start() {
-        // Change of music at 6pm
-        RegisterSubscription(
-            new Func<bool>(() => isTimeLaterThan(18, 0) && dayMusic),
-            new Action(() => {
-                dayMusic = false;
-                audioSource.Stop();
-                audioSource.clip = nightClip;
-                audioSource.Play();
-            }));
-
-        // Dying after new day
-        RegisterSubscription(
-            new Func<bool>(() => isTimeLaterThan(24, 0)),
-            new Action(() => gameResetScript.Reset())
-            );
-    }
 
     void FixedUpdate() {
         var timeSinceLast = Time.fixedDeltaTime;
@@ -108,7 +77,7 @@ public class TimeController : MonoBehaviour {
         );
     }
 
-    private bool isTimeLaterThan(int hour, int minute) {
+    public bool isTimeLaterThan(int hour, int minute) {
         return secondOfDay > ((hour * 60 * 60) + (minute * 60));
     }
 
@@ -122,6 +91,9 @@ public class TimeController : MonoBehaviour {
         return hour < 12 ? "AM" : "PM";
     }
 
+    /// <summary>
+    /// DTO for setting up a conditional event.
+    /// </summary>
     public class Subscription {
         public Func<bool> Condition;
         public Action Action;

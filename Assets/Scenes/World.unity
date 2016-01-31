@@ -748,33 +748,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!1 &493756804
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 493756805}
-  m_Layer: 0
-  m_Name: Lake Ambience
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &493756805
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 493756804}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -48.517048, y: 69.98474, z: 32.758987}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
 --- !u!1 &605474727
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,7 +828,7 @@ GameObject:
   - 4: {fileID: 706859985}
   - 82: {fileID: 706859986}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: Portal Sound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1045,7 +1018,8 @@ Prefab:
       propertyPath: Loop
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8217328, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &709896835 stripped
@@ -1411,11 +1385,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 969978103}
   m_LocalRotation: {x: -0.60341555, y: 0.019372022, z: 0.01466632, w: 0.7970567}
-  m_LocalPosition: {x: -4.55505, y: -2049.862, z: -525.64264}
+  m_LocalPosition: {x: -76.63954, y: -1224.9889, z: -289.30676}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
 --- !u!45 &969978106
 Skybox:
   m_ObjectHideFlags: 0
@@ -1821,6 +1795,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1341939063}
   - 82: {fileID: 1341939064}
+  - 114: {fileID: 1341939065}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -1848,12 +1823,13 @@ AudioSource:
   m_GameObject: {fileID: 1341939062}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24354008, guid: ff914f429b027e442ab309656ce12a56,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 62935ac10bfac374b80f1817221f602c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   Priority: 128
@@ -1902,7 +1878,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1914,6 +1890,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1341939065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1341939062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f5b551684feb154ba0c080c388b8bdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioClips:
+  - {fileID: 0}
+  - {fileID: 0}
+  TimeController: {fileID: 1822655707}
 --- !u!1 &1361393965 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 170274, guid: a76f06e3d25a72b4f89cfe4f3bf196c5, type: 2}
@@ -2287,7 +2278,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
 --- !u!4 &1613923436 stripped
 Transform:
   m_PrefabParentObject: {fileID: 432178, guid: abf8c719c29ae70499f1018bb3917e6a, type: 2}
@@ -2301,6 +2292,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1643056834}
   - 82: {fileID: 1643056833}
+  - 114: {fileID: 1643056835}
   m_Layer: 0
   m_Name: Ambience
   m_TagString: Untagged
@@ -2395,6 +2387,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1803810448}
   m_RootOrder: 2
+--- !u!114 &1643056835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1643056832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 757e0d962b58d1b43b56528388db08cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioClips:
+  - {fileID: 8300000, guid: 2c118913757f46549a85285d672c015f, type: 3}
+  - {fileID: 8300000, guid: e6c088ef479e76f47bb66a4d901547f8, type: 3}
+  TimeController: {fileID: 1822655707}
 --- !u!1001 &1726220691
 Prefab:
   m_ObjectHideFlags: 0

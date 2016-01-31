@@ -32836,6 +32836,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameResetScript: {fileID: 960527954}
+  audioSource: {fileID: 709896838}
+  nightClip: {fileID: 8300000, guid: a33a211c5eda50448980d3ae0933435d, type: 3}
   speed: 60
 --- !u!4 &1822655708
 Transform:

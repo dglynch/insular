@@ -5,6 +5,17 @@ public class TimeController : MonoBehaviour {
 
     public GameReset gameResetScript;
 
+    /// <summary>
+    /// The clip source to change.
+    /// </summary>
+    public AudioSource audioSource;
+    /// <summary>
+    /// Clip that starts playing at night.
+    /// </summary>
+    public AudioClip nightClip;
+
+    private bool dayMusic = true;
+
     private double secondOfDay = 21600;
 
     private bool paused = false;
@@ -58,6 +69,12 @@ public class TimeController : MonoBehaviour {
         if (isTimeLaterThan(24, 0)) {
             // You've reached a new day and you died.
             gameResetScript.Reset();
+        }
+        if (isTimeLaterThan(18, 0) && dayMusic) {
+            dayMusic = false;
+            audioSource.Stop();
+            audioSource.clip = nightClip;
+            audioSource.Play();
         }
     }
 

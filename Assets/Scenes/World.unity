@@ -2418,6 +2418,68 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 63af7620a7774ad41ac07f785bb77b0a, type: 2}
   m_PrefabInternal: {fileID: 1116744886}
+--- !u!1 &1141431125
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1141431127}
+  - 20: {fileID: 1141431126}
+  m_Layer: 0
+  m_Name: Water4SimpleReflectionFirstPersonCharacter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!20 &1141431126
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1141431125}
+  m_Enabled: 0
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 1}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967279
+  m_RenderingPath: 1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
+--- !u!4 &1141431127
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1141431125}
+  m_LocalRotation: {x: -0.60341555, y: 0.019372022, z: 0.01466632, w: 0.7970567}
+  m_LocalPosition: {x: -75.22557, y: -1121.7433, z: -260.2335}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 35
 --- !u!1001 &1157877788
 Prefab:
   m_ObjectHideFlags: 0
@@ -2906,8 +2968,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1341939063}
-  - 82: {fileID: 1341939064}
   - 114: {fileID: 1341939065}
+  - 82: {fileID: 1341939064}
   m_Layer: 9
   m_Name: Music
   m_TagString: Untagged
@@ -2937,7 +2999,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24354008, guid: ff914f429b027e442ab309656ce12a56,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 62935ac10bfac374b80f1817221f602c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a9fad21e311cb8145838e5b7396bed52, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3014,7 +3076,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AudioClips:
-  - {fileID: 0}
+  - {fileID: 8300000, guid: a9fad21e311cb8145838e5b7396bed52, type: 3}
+  - {fileID: 8300000, guid: 62935ac10bfac374b80f1817221f602c, type: 3}
   - {fileID: 0}
   TimeController: {fileID: 1822655707}
 --- !u!1001 &1372764916

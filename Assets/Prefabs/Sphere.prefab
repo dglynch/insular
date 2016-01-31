@@ -100,9 +100,9 @@ Light:
   m_GameObject: {fileID: 175068}
   m_Enabled: 1
   serializedVersion: 6
-  m_Type: 3
+  m_Type: 2
   m_Color: {r: 0.6666667, g: 1, b: 1, a: 1}
-  m_Intensity: 6.36
+  m_Intensity: 7.71
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -120,7 +120,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_BounceIntensity: 2.17
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -143,7 +143,19 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Intensity
+      value: 7.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 185370}

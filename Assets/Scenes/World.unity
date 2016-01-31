@@ -3078,7 +3078,6 @@ MonoBehaviour:
   AudioClips:
   - {fileID: 8300000, guid: a9fad21e311cb8145838e5b7396bed52, type: 3}
   - {fileID: 8300000, guid: 62935ac10bfac374b80f1817221f602c, type: 3}
-  - {fileID: 0}
   TimeController: {fileID: 1822655707}
 --- !u!1001 &1372764916
 Prefab:
